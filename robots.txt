@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /Fotos/
+Disallow: /Fotos-2/
+Disallow: /perfil_instagram/
+
+Sitemap: https://marycakesconfeitaria.com.br/sitemap.xml

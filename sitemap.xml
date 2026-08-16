@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://marycakesconfeitaria.com.br/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+    <image:image>
+      <image:loc>https://marycakesconfeitaria.com.br/assets/img/mary-retrato.webp</image:loc>
+      <image:title>Marinalva Souza, confeiteira da Mary Cakes Confeitaria</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://marycakesconfeitaria.com.br/assets/img/fachada.webp</image:loc>
+      <image:title>Fachada da Mary Cakes Confeitaria em São Paulo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://marycakesconfeitaria.com.br/assets/img/produtos/bolo-masha.webp</image:loc>
+      <image:title>Bolo de festa personalizado tema Masha e o Urso</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://marycakesconfeitaria.com.br/assets/img/produtos/bolo-rosa-morango.webp</image:loc>
+      <image:title>Bolo decorado de chantilly com morangos</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://marycakesconfeitaria.com.br/assets/img/produtos/bolo-cenoura-chocolate.webp</image:loc>
+      <image:title>Bolo caseiro de cenoura com calda de chocolate</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://marycakesconfeitaria.com.br/assets/img/produtos/vitrine-tortas.webp</image:loc>
+      <image:title>Tortas gourmet da Mary Cakes Confeitaria</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://marycakesconfeitaria.com.br/assets/img/produtos/copos-morango.webp</image:loc>
+      <image:title>Copo da felicidade de morango e chocolate</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://marycakesconfeitaria.com.br/assets/img/produtos/bombom-uva.webp</image:loc>
+      <image:title>Bombom de uva cremoso</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://marycakesconfeitaria.com.br/assets/img/produtos/morango-do-amor.webp</image:loc>
+      <image:title>Morango do amor artesanal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://marycakesconfeitaria.com.br/assets/img/produtos/ovo-brigadeiro.webp</image:loc>
+      <image:title>Ovo de colher de brigadeiro trufado para a Páscoa</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://marycakesconfeitaria.com.br/assets/img/produtos/cones-trufados.webp</image:loc>
+      <image:title>Cones trufados artesanais</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://marycakesconfeitaria.com.br/assets/img/produtos/cesta-presente.webp</image:loc>
+      <image:title>Cesta de presente de Dia das Mães</image:title>
+    </image:image>
+  </url>
+</urlset>

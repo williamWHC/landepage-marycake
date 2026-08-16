@@ -1,0 +1,15 @@
+{
+  "name": "Mary Cakes Confeitaria",
+  "short_name": "Mary Cakes",
+  "description": "Confeitaria artesanal em São Paulo desde 2016. Bolos de festa personalizados, bolos caseiros, tortas gourmet e doces sob encomenda.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFBFC",
+  "theme_color": "#E8388F",
+  "icons": [
+    { "src": "assets/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

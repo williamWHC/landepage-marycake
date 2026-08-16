@@ -1,0 +1,90 @@
+# =====================================================================
+# Mary Cakes Confeitaria — Apache / cPanel / hospedagem compartilhada
+# Cabeçalhos de segurança, HTTPS, cache e compressão.
+# Se a hospedagem for Netlify / Vercel / Cloudflare Pages, use o
+# arquivo _headers em vez deste.
+# =====================================================================
+
+# ---------- força HTTPS ----------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ---------- cabeçalhos de segurança ----------
+<IfModule mod_headers.c>
+  # obriga HTTPS por 1 ano (só ative depois de confirmar que o SSL funciona)
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+  # impede o navegador de "adivinhar" o tipo do arquivo
+  Header always set X-Content-Type-Options "nosniff"
+
+  # anti-clickjacking (navegadores antigos; os novos usam frame-ancestors da CSP)
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # não vaza a URL completa para sites externos
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # o site não usa câmera, microfone, localização nem pagamento
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+
+  # Content-Security-Policy
+  #   'sha256-riit...' = hash do único <script> inline do index.html.
+  #   SE VOCÊ EDITAR AQUELE SCRIPT, O HASH MUDA e o script para de rodar.
+  #   Recalcule ou remova a diretiva script-src.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'sha256-riitXBKGtl5y5ccA7GF6ccqJuwEVP5tm8j0ff/fbw9U='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'self'; upgrade-insecure-requests"
+
+  # não expõe a versão do servidor
+  Header unset X-Powered-By
+  Header always unset X-Powered-By
+</IfModule>
+
+# ---------- esconde o material de origem ----------
+# As pastas Fotos/, Fotos-2/ e perfil_instagram/ não devem ir para o servidor.
+# Esta regra é só uma segunda barreira caso subam por engano.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^(Fotos|Fotos-2|perfil_instagram|\.claude)/ - [F,L]
+</IfModule>
+
+# bloqueia arquivos que nunca devem ser servidos
+<FilesMatch "^(\.htaccess|\.gitignore|README\.md|.*\.py|.*\.log)$">
+  Require all denied
+</FilesMatch>
+
+# desliga listagem de diretório
+Options -Indexes
+
+# ---------- cache ----------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp              "access plus 1 year"
+  ExpiresByType image/png               "access plus 1 year"
+  ExpiresByType image/jpeg              "access plus 1 year"
+  ExpiresByType image/x-icon            "access plus 1 year"
+  # CSS e JS são versionados na URL (?v=), então podem ser cacheados por muito tempo
+  ExpiresByType text/css                "access plus 1 year"
+  ExpiresByType application/javascript  "access plus 1 year"
+  ExpiresByType text/html               "access plus 0 seconds"
+</IfModule>
+
+# ---------- compressão ----------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml text/xml
+</IfModule>
+
+# ---------- tipos MIME ----------
+# Servidores antigos não conhecem .webp e mandam application/octet-stream.
+# Como usamos X-Content-Type-Options: nosniff, o navegador RECUSA exibir a
+# imagem nesse caso — e o site inteiro fica sem fotos. Declarar é obrigatório.
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+  AddType image/x-icon .ico
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
+# ---------- charset ----------
+AddDefaultCharset UTF-8
