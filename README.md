@@ -21,32 +21,75 @@ Depois acesse `http://localhost:5173`.
 
 ## Como publicar
 
-Suba **estes arquivos** para a raiz da hospedagem:
+O repositório tem ~279 MB, mas **só 14 MB vão para o ar**. O `.gitignore` já exclui
+`Fotos/`, `Fotos-2/`, `perfil_instagram/` e `.claude/` — 127 MB de material bruto que
+não deve ficar público.
+
+Vai para o servidor:
 
 ```
-index.html
-robots.txt
-sitemap.xml
-site.webmanifest
+index.html  404.html
+robots.txt  sitemap.xml  site.webmanifest  .nojekyll
 .htaccess          ← só em Apache/cPanel
 _headers           ← só em Netlify/Cloudflare Pages
-assets/
+assets/            (14 MB: imagens, vídeo, CSS, JS)
 ```
 
-> Suba **um** dos dois: `.htaccess` (Apache/cPanel/hospedagem compartilhada) **ou**
-> `_headers` (Netlify/Vercel/Cloudflare Pages). O outro pode ficar de fora.
+---
 
-**Não suba** `Fotos/`, `Fotos-2/`, `perfil_instagram/`, `.claude/` nem este `README.md` — são
-material de origem e configuração local.
+### Fase de teste: GitHub Pages
 
-Funciona em qualquer hospedagem estática: Netlify, Vercel, GitHub Pages, Cloudflare Pages,
-ou hospedagem compartilhada tradicional (cPanel/FTP).
+O site foi **testado servido a partir de uma subpasta** (`/marycakes_confeitaria/`), que é
+exatamente como o GitHub Pages entrega quando não há domínio próprio. Resultado: 118 imagens,
+0 quebrada, CSS, JS, vídeo, manifest e 404 todos resolvendo.
 
-### Cache dos assets
+```bash
+git init && git add . && git commit -m "Landing page Mary Cakes Confeitaria"
+git branch -M main
+git remote add origin https://github.com/SEU-USUARIO/marycakes-confeitaria.git
+git push -u origin main
+```
 
-O CSS e o JS são chamados com versão (`style.css?v=6.0.0`). **Sempre que editar um deles,
-incremente esse número no `index.html`** — senão o navegador de quem já visitou continua
-servindo a versão antiga.
+Depois: **Settings → Pages → Source: `main` / `root`**. Sai no ar em
+`https://SEU-USUARIO.github.io/marycakes-confeitaria/`.
+
+Três coisas garantem que funciona em subpasta e já estão feitas:
+
+| Arquivo | Por quê |
+|---|---|
+| `.nojekyll` | O GitHub Pages roda Jekyll por padrão e ignora arquivos que começam com `_` |
+| `site.webmanifest` | `start_url` e `scope` são `"./"` — com `"/"` o app apontaria para a raiz do domínio |
+| Todos os caminhos | Relativos, sem `/` inicial. Verificado: 132 referências, nenhuma absoluta |
+
+**Também verifiquei maiúsculas/minúsculas.** O Windows não diferencia, o Linux do GitHub sim —
+é o erro clássico que funciona na sua máquina e dá 404 no ar. Nenhuma divergência encontrada.
+
+#### ⚠️ O que NÃO funciona no GitHub Pages
+
+**Nem `.htaccess` nem `_headers` têm efeito lá.** O GitHub Pages não permite cabeçalhos
+personalizados. Ou seja, durante o teste **a CSP e o HSTS ficam inativos** — os arquivos vão
+junto, mas só passam a valer na hospedagem final. O HTTPS do `github.io` continua funcionando
+normalmente.
+
+Sobre indexação: o `canonical` e a `og:url` apontam para o domínio definitivo, então o Google
+não deve indexar a URL de teste. Se quiser garantia total durante a validação, adicione no
+`<head>` do `index.html` e **remova antes de publicar de verdade**:
+
+```html
+<meta name="robots" content="noindex">
+```
+
+---
+
+### Fase final: hospedagem própria
+
+Suba os mesmos arquivos por FTP/painel para a pasta pública (`public_html`, `www` ou similar).
+Aí sim o `.htaccess` entra em ação e ativa CSP, HSTS, compressão e cache.
+
+Se preferir manter no GitHub com domínio próprio, dá para apontar o domínio para o GitHub Pages
+(arquivo `CNAME`) — mas você continua sem cabeçalhos de segurança. Nesse caso, prefira
+**Netlify** ou **Cloudflare Pages**: também gratuitos, conectam no mesmo repositório e
+respeitam o `_headers`.
 
 ### Antes de publicar: trocar o domínio
 
@@ -210,6 +253,113 @@ Isso reduz o atrito e faz o pedido chegar já organizado.
 - Zero dependências JS; único recurso externo são as fontes do Google
 
 ---
+
+---
+
+## Organização das fotos e como adicionar novas
+
+### Onde ficam
+
+```
+fotos-origem/            fotos brutas, por categoria (NÃO vai para o servidor)
+├── 01-bolos-festa/      15      06-doces/          6
+├── 02-bolos-classicos/   7      07-pascoa/         9
+├── 03-bolos-caseiros/    3      08-presentes/      2
+├── 04-tortas/            8      09-salgados/       1
+├── 05-copos/             6      10-loja-e-equipe/  5
+└── _referencia/          PDF do perfil e prints dos destaques
+
+ferramentas/
+├── build-fotos.py       processa tudo
+└── manifesto.json       59 fotos: recorte, enquadramento, título e alt
+```
+
+### Adicionar uma foto nova
+
+1. Salve o arquivo na pasta da categoria, com **nome em minúsculo, sem acento e sem
+   espaço** — esse nome vira o endereço da foto no site. Ex.: `bolo-red-velvet.png`
+2. Rode:
+
+```bash
+python ferramentas/build-fotos.py --novas
+```
+
+Ele gera as duas versões WebP, registra no manifesto e **imprime o bloco de HTML pronto
+para colar** na galeria, já com a categoria certa. Só falta escrever o título e o texto
+alternativo (o `alt` vem marcado como `TODO`).
+
+**Duas exceções**, de propósito: arquivos começando com `_` são ignorados (cardápios,
+artes, material de apoio) e a pasta `10-loja-e-equipe` inteira também — são as fotos da
+marca (retrato da Mary, fachada, vídeo), que entram em pontos fixos do site, não na galeria.
+
+### A Mary que aponta para o botão do WhatsApp
+
+Ela fica fixa no canto inferior direito e acompanha a rolagem, **passando por trás do
+botão** — a saia some atrás do balão verde e do rodapé da tela, e os dedos dela encostam
+no botão.
+
+Para conseguir isso ela é uma **camada separada** (`.wa-mascote-link`, `z-index: 79`)
+e não um filho do botão (`z-index: 80`). Se estivesse dentro dele, o botão viraria o
+contexto de empilhamento e ela nunca ficaria atrás do próprio fundo verde. O link dela
+tem `aria-hidden="true"` e `tabindex="-1"` para não virar um link duplicado no leitor de
+tela — o botão ao lado já cumpre esse papel.
+
+Para trocar a ilustração:
+
+1. Salve o PNG **com fundo transparente** em
+   `fotos-origem/10-loja-e-equipe/mary-mascote.png`
+2. Rode:
+
+```bash
+python ferramentas/build-fotos.py --mascote
+```
+
+O script recorta a moldura vazia em volta da figura, redimensiona para 2× do tamanho
+exibido, salva em `assets/img/mary-mascote.webp` e **avisa** se a imagem vier sem
+transparência (nesse caso ela apareceria como um retângulo branco sobre o site).
+Ao final ele imprime as dimensões para você atualizar `width`/`height` no `index.html`.
+
+Comportamento já definido no CSS/JS:
+
+| Detalhe | Como está |
+|---|---|
+| Quando aparece | Depois de 55% da primeira tela de rolagem, para não competir com o hero |
+| Tamanho | 150 px no desktop, 104 px no celular |
+| Posição | `bottom` negativo (−63 px desktop / −27 px celular) para os dedos entrarem ~8 px no botão |
+| Movimento | Entrada com leve salto + balanço discreto de 4,5 s; para no hover |
+| Telas baixas | Some abaixo de 520 px de altura (celular deitado) |
+| Acessibilidade | `alt=""` (é decorativa; o link já tem rótulo) e fica estática com `prefers-reduced-motion` |
+
+O botão **voltar ao topo** foi movido para o canto inferior **esquerdo** para não disputar
+espaço com ela.
+
+### Se o recorte sair torto
+
+Edite a entrada da foto em `ferramentas/manifesto.json` e reprocesse só ela:
+
+```bash
+python ferramentas/build-fotos.py --slug bolo-red-velvet
+```
+
+| Campo | O que faz |
+|---|---|
+| `recorte` | `[x1, y1, x2, y2]` em pixels da foto original, ou `null` para usar inteira |
+| `enquadramento` | `[ax, ay]` de 0 a 1. **`ay` menor mostra mais do topo** — é o que evita cortar o topper do bolo |
+
+### Por que não é automático
+
+Cada print do Instagram tem seta de carrossel, bolinha de paginação, adesivo ou cabeçalho
+de story em posição diferente — foram **59 recortes ajustados um a um**. Por isso o processo
+é assistido: o script faz o trabalho pesado, mas quem escolhe o enquadramento e escreve o
+texto alternativo é uma pessoa. Se a Mary precisar publicar sozinha um dia, o caminho é um
+CMS (Decap/Netlify CMS), não esta pasta — e aí a hospedagem precisa ser Netlify ou
+Cloudflare Pages, não GitHub Pages.
+
+### Limpeza pendente
+
+As pastas antigas `Fotos/`, `Fotos-2/` e `perfil_instagram/` (127 MB) **já foram copiadas**
+para `fotos-origem/`, incluindo o PDF do perfil e os prints dos destaques, que estão em
+`_referencia/`. Pode apagá-las quando quiser — nada mais depende delas.
 
 ## Segurança
 

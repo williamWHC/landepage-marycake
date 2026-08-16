@@ -33,6 +33,20 @@
   /* distancia dos botoes flutuantes ate a borda — os dois usam a mesma base */
   --float-gap:clamp(.9rem,3vw,1.6rem);
 
+  /* =====================================================================
+     AJUSTE DA MARY NO BOTAO DO WHATSAPP  —  mexa so nestes 3 numeros
+     ---------------------------------------------------------------------
+     --mary-largura : tamanho dela. Maior = ela cresce (a altura acompanha).
+     --mary-descer  : quanto ela DESCE. Aumentar = desce (dedos entram mais
+                      no botao e a saia some). Diminuir = sobe.
+     --mary-lado    : quanto ela vai para a DIREITA. Aumentar = mais para a
+                      direita; usar negativo joga para a esquerda.
+     Os valores do celular ficam logo abaixo, no bloco @media.
+     ===================================================================== */
+  --mary-largura:150px;
+  --mary-descer:35px;
+  --mary-lado:4px;
+
   --shadow-sm:0 2px 8px rgba(126,15,69,.06);
   --shadow-md:0 12px 32px -12px rgba(126,15,69,.22);
   --shadow-lg:0 28px 60px -24px rgba(126,15,69,.32);
@@ -50,6 +64,15 @@
   --wrap:1200px;
   --pad:clamp(1.15rem,4vw,2.5rem);
   --header-h:76px;
+}
+
+/* os mesmos 3 ajustes da Mary, versao celular */
+@media (max-width:560px){
+  :root{
+    --mary-largura:104px;
+    --mary-descer:27px;
+    --mary-lado:2px;
+  }
 }
 
 /* ---------- reset ---------- */
@@ -1091,9 +1114,47 @@ h1 em{font-family:var(--script);font-style:normal;color:var(--pink-500);font-siz
   70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}
   100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
 }
+/* ---------- a Mary apontando para o botão ----------
+   Camada própria com z-index 79 (o botão é 80), então ela passa POR TRÁS dele.
+   O `bottom` negativo a desce até os dedos encostarem no botão; a saia fica
+   escondida atrás do balão verde e do rodapé da tela.
+   Entra depois de um pouco de rolagem para não competir com o hero. */
+.wa-mascote-link{
+  position:fixed;z-index:79;
+  /* os 3 valores vem do bloco AJUSTE DA MARY, no topo deste arquivo */
+  right:calc(var(--float-gap) - var(--mary-lado));
+  bottom:calc(var(--float-gap) - var(--mary-descer));
+  width:var(--mary-largura);line-height:0;
+  opacity:0;transform:translateY(20px) scale(.9);
+  transform-origin:bottom center;
+  transition:opacity .45s ease,transform .55s cubic-bezier(.2,1.3,.4,1);
+}
+.wa-mascote-link.tem-mary{
+  opacity:1;transform:none;
+  animation:maryBalanca 4.5s ease-in-out .6s infinite;
+}
+.wa-mascote{
+  width:100%;height:auto;
+  /* o reset aplica max-width:100% em img; aqui a largura vem do link */
+  max-width:none;
+  filter:drop-shadow(0 8px 16px rgba(126,15,69,.26));
+}
+/* balanço discreto: chama o olho sem virar distração */
+@keyframes maryBalanca{
+  0%,100%{transform:translateY(0) rotate(0)}
+  50%{transform:translateY(-7px) rotate(-1.6deg)}
+}
+.wa-mascote-link:hover,
+.wa-float:hover + .wa-mascote-link{animation-play-state:paused}
+
 @media (max-width:560px){
   .wa-float-label{display:none}
   .wa-float{padding:.95rem;border-radius:50%}
+  /* a posicao dela ja vem das variaveis do bloco @media la em cima */
+}
+/* telas muito baixas (celular deitado): a Mary atrapalharia a leitura */
+@media (max-height:520px){
+  .wa-mascote-link{display:none}
 }
 
 /* =========================================================
@@ -1101,9 +1162,9 @@ h1 em{font-family:var(--script);font-style:normal;color:var(--pink-500);font-siz
    ========================================================= */
 .to-top{
   position:fixed;z-index:79;
-  right:var(--float-gap);
-  /* empilha acima do WhatsApp: altura do botao (52px) + folga */
-  bottom:calc(var(--float-gap) + 52px + 18px);
+  /* canto oposto: a direita agora e da Mary + botao do WhatsApp */
+  left:var(--float-gap);
+  bottom:var(--float-gap);
   width:46px;height:46px;border-radius:50%;
   display:grid;place-content:center;
   background:rgba(255,255,255,.92);
@@ -1118,8 +1179,7 @@ h1 em{font-family:var(--script);font-style:normal;color:var(--pink-500);font-siz
 .to-top:hover{background:var(--pink-500)}
 .to-top:hover svg{fill:#fff}
 @media (max-width:560px){
-  /* no mobile o WhatsApp vira circulo de 55px */
-  .to-top{bottom:calc(var(--float-gap) + 55px + 18px);width:44px;height:44px}
+  .to-top{width:42px;height:42px}
 }
 
 /* =========================================================
@@ -1199,7 +1259,8 @@ h1 em{font-family:var(--script);font-style:normal;color:var(--pink-500);font-siz
 @media (prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none}
   .hero-photo--top,.hero-photo--bottom,.wa-float::before,.status-dot,
-  .about-inset,.about-chip,.about-blob--b{animation:none}
+  .about-inset,.about-chip,.about-blob--b,.wa-mascote-link{animation:none}
+  .wa-mascote-link.tem-mary{transform:none}
   .hero-photo img,.about-main img,.about-inset img,.about-chip img{transition:none}
   .carousel-track{scroll-behavior:auto}
   .js .shot img,.js .slide img,.js .card-media img{opacity:1;transition:none}

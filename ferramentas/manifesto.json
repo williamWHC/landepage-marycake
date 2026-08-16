@@ -1,0 +1,900 @@
+{
+  "versao": 1,
+  "saida": "assets/img/produtos",
+  "fotos": [
+    {
+      "arquivo": "01-bolos-festa/bolo-masha.png",
+      "slug": "bolo-masha",
+      "recorte": [
+        27,
+        18,
+        865,
+        1173
+      ],
+      "enquadramento": [
+        0.5,
+        0.3
+      ],
+      "titulo": "Bolo Masha e o Urso — 3 anos da Luiza",
+      "alt": "Bolo infantil rosa com tema Masha e o Urso, girassóis e escada de chocolate"
+    },
+    {
+      "arquivo": "01-bolos-festa/bolo-laco-preto.png",
+      "slug": "bolo-laco-preto",
+      "recorte": [
+        27,
+        18,
+        875,
+        1170
+      ],
+      "enquadramento": [
+        0.72,
+        0.3
+      ],
+      "titulo": "Bolo laços pretos — estilo coquette",
+      "alt": "Bolo rosa claro estilo coquette com laços de fita preta e coraçõezinhos pretos"
+    },
+    {
+      "arquivo": "01-bolos-festa/bolo-heineken.png",
+      "slug": "bolo-heineken",
+      "recorte": [
+        27,
+        18,
+        864,
+        1173
+      ],
+      "enquadramento": [
+        0.5,
+        0.3
+      ],
+      "titulo": "Bolo boteco Heineken",
+      "alt": "Bolo branco com babado verde, tema boteco, canecas de chopp e garrafas de cerveja"
+    },
+    {
+      "arquivo": "01-bolos-festa/bolo-vingadores.png",
+      "slug": "bolo-vingadores",
+      "recorte": [
+        27,
+        18,
+        864,
+        1173
+      ],
+      "enquadramento": [
+        0.5,
+        0.3
+      ],
+      "titulo": "Bolo Vingadores — 1 ano do Nathan",
+      "alt": "Bolo infantil azul e laranja com tema dos Vingadores e escudo do Capitão América"
+    },
+    {
+      "arquivo": "01-bolos-festa/bolo-churrasco.png",
+      "slug": "bolo-churrasco",
+      "recorte": [
+        31,
+        18,
+        986,
+        1168
+      ],
+      "enquadramento": [
+        0.5,
+        0.3
+      ],
+      "titulo": "Bolo churrasco em família — 32 anos",
+      "alt": "Bolo em formato de churrasqueira de tijolos com chamas de chantilly laranja e espetos"
+    },
+    {
+      "arquivo": "01-bolos-festa/bolo-palmeiras.png",
+      "slug": "bolo-palmeiras",
+      "recorte": [
+        27,
+        18,
+        864,
+        1170
+      ],
+      "enquadramento": [
+        0.5,
+        0.3
+      ],
+      "titulo": "Bolo Palmeiras com grama em bico de confeitar",
+      "alt": "Bolo verde e branco degradê com escudo do Palmeiras e grama de chantilly verde"
+    },
+    {
+      "arquivo": "01-bolos-festa/bolo-corinthians.png",
+      "slug": "bolo-corinthians",
+      "recorte": [
+        27,
+        18,
+        862,
+        1171
+      ],
+      "enquadramento": [
+        0.5,
+        0.3
+      ],
+      "titulo": "Bolo Corinthians personalizado com nome",
+      "alt": "Bolo preto e branco degradê com escudo do Corinthians e topper personalizado"
+    },
+    {
+      "arquivo": "01-bolos-festa/bolo-flork.png",
+      "slug": "bolo-flork",
+      "recorte": [
+        27,
+        18,
+        862,
+        1173
+      ],
+      "enquadramento": [
+        0.5,
+        0.3
+      ],
+      "titulo": "Bolo Flork com frases personalizadas",
+      "alt": "Bolo branco texturizado com toppers de memes Flork e frases bem-humoradas"
+    },
+    {
+      "arquivo": "01-bolos-festa/bolo-futebol.png",
+      "slug": "bolo-futebol",
+      "recorte": [
+        32,
+        18,
+        1037,
+        1169
+      ],
+      "enquadramento": [
+        0.5,
+        0.3
+      ],
+      "titulo": "Bolo futebol com craques e taça",
+      "alt": "Bolo amarelo e verde com jogadores de futebol, taça dourada e bolas"
+    },
+    {
+      "arquivo": "01-bolos-festa/bolo-selecao.png",
+      "slug": "bolo-selecao",
+      "recorte": [
+        27,
+        18,
+        866,
+        1173
+      ],
+      "enquadramento": [
+        0.5,
+        0.3
+      ],
+      "titulo": "Bolo Seleção Brasileira — 40 anos da Érika",
+      "alt": "Bolo amarelo com escudo da CBF, camisa da seleção e coração com a bandeira do Brasil"
+    },
+    {
+      "arquivo": "01-bolos-festa/bolo-stitch.png",
+      "slug": "bolo-stitch",
+      "recorte": [
+        27,
+        18,
+        871,
+        1166
+      ],
+      "enquadramento": [
+        0.5,
+        0.3
+      ],
+      "titulo": "Bolo Angel & Stitch — 6 anos da Helena",
+      "alt": "Bolo quadrado com babados de chantilly degradê rosa e tema da personagem Angel"
+    },
+    {
+      "arquivo": "01-bolos-festa/bolo-gamer.png",
+      "slug": "bolo-gamer",
+      "recorte": [
+        27,
+        18,
+        867,
+        1169
+      ],
+      "enquadramento": [
+        0.5,
+        0.3
+      ],
+      "titulo": "Bolo gamer — 18 anos do Davi",
+      "alt": "Bolo branco com respingos azuis e toppers de notebooks gamer e level up"
+    },
+    {
+      "arquivo": "01-bolos-festa/bolo-timao.png",
+      "slug": "bolo-timao",
+      "recorte": [
+        27,
+        18,
+        869,
+        1167
+      ],
+      "enquadramento": [
+        0.5,
+        0.3
+      ],
+      "titulo": "Bolo Corinthians — Poderoso Timão",
+      "alt": "Bolo degradê preto e branco com escudo do Corinthians, mascote e taça"
+    },
+    {
+      "arquivo": "01-bolos-festa/bolo-spfc.png",
+      "slug": "bolo-spfc",
+      "recorte": [
+        27,
+        18,
+        873,
+        1172
+      ],
+      "enquadramento": [
+        0.5,
+        0.3
+      ],
+      "titulo": "Bolo São Paulo FC em degradê tricolor",
+      "alt": "Bolo degradê vermelho, branco e preto com escudo do São Paulo FC e grama verde"
+    },
+    {
+      "arquivo": "01-bolos-festa/bolo-moana.png",
+      "slug": "bolo-moana",
+      "recorte": [
+        27,
+        18,
+        872,
+        1166
+      ],
+      "enquadramento": [
+        0.5,
+        0.3
+      ],
+      "titulo": "Bolo Moana — 8 anos da Jady Ioanna",
+      "alt": "Bolo quadrado degradê amarelo e azul com tema Moana, coqueiros e flor tropical"
+    },
+    {
+      "arquivo": "02-bolos-classicos/bolo-morango.png",
+      "slug": "bolo-morango",
+      "recorte": [
+        27,
+        18,
+        873,
+        1169
+      ],
+      "enquadramento": [
+        0.5,
+        0.4
+      ],
+      "titulo": "Bolo de morango com laços de cetim",
+      "alt": "Bolo retangular de chantilly com morangos frescos fatiados na borda e laços vermelhos"
+    },
+    {
+      "arquivo": "02-bolos-classicos/bolo-chantilly.png",
+      "slug": "bolo-chantilly",
+      "recorte": [
+        27,
+        18,
+        868,
+        1172
+      ],
+      "enquadramento": [
+        0.5,
+        0.45
+      ],
+      "titulo": "Bolo quadrado de chantilly com morangos",
+      "alt": "Bolo quadrado todo em babados de chantilly branco com morangos nos cantos e brilho dourado"
+    },
+    {
+      "arquivo": "02-bolos-classicos/bolo-rosas.png",
+      "slug": "bolo-rosas",
+      "recorte": [
+        27,
+        18,
+        866,
+        1167
+      ],
+      "enquadramento": [
+        0.5,
+        0.3
+      ],
+      "titulo": "Bolo de rosas em chantilly",
+      "alt": "Bolo redondo de chantilly branco com rosas cor-de-rosa e folhas verdes em bico de confeitar"
+    },
+    {
+      "arquivo": "03-bolos-caseiros/bolos-caseiros.png",
+      "slug": "bolos-caseiros",
+      "recorte": [
+        22,
+        530,
+        680,
+        1118
+      ],
+      "enquadramento": [
+        0.45,
+        0.5
+      ],
+      "titulo": "Bolos caseiros do dia: milho e cenoura",
+      "alt": "Bolos caseiros redondos de milho e cenoura recém-assados sobre a bancada"
+    },
+    {
+      "arquivo": "04-tortas/tortas-gourmet.png",
+      "slug": "tortas-gourmet",
+      "recorte": [
+        17,
+        480,
+        666,
+        1118
+      ],
+      "enquadramento": [
+        0.5,
+        0.5
+      ],
+      "titulo": "Festival de tortas gourmet na vitrine",
+      "alt": "Vitrine com várias fatias de torta gourmet de chocolate embaladas"
+    },
+    {
+      "arquivo": "05-copos/copo-felicidade.png",
+      "slug": "copo-felicidade",
+      "recorte": [
+        16,
+        18,
+        653,
+        905
+      ],
+      "enquadramento": [
+        0.45,
+        0.35
+      ],
+      "titulo": "Copos da felicidade prontos para levar",
+      "alt": "Copos transparentes com camadas de creme branco, chocolate e uvas verdes"
+    },
+    {
+      "arquivo": "02-bolos-classicos/colagem-bolo-rosa-e-coco.png",
+      "slug": "bolo-rosa-morango",
+      "recorte": [
+        0,
+        310,
+        1440,
+        1380
+      ],
+      "enquadramento": [
+        0.5,
+        0.42
+      ],
+      "titulo": "Bolo rosa com babados e morango",
+      "alt": "Bolo rosa alto com babados de chantilly e morangos frescos no topo"
+    },
+    {
+      "arquivo": "02-bolos-classicos/colagem-bolo-rosa-e-coco.png",
+      "slug": "bolo-coco-morango",
+      "recorte": [
+        0,
+        1560,
+        1440,
+        2657
+      ],
+      "enquadramento": [
+        0.5,
+        0.42
+      ],
+      "titulo": "Bolo de coco com morango",
+      "alt": "Bolo branco coberto de coco ralado com morangos frescos no topo"
+    },
+    {
+      "arquivo": "02-bolos-classicos/colagem-docinhos-e-bolo-amarelo.png",
+      "slug": "docinhos-festa",
+      "recorte": [
+        0,
+        430,
+        1440,
+        1350
+      ],
+      "enquadramento": [
+        0.5,
+        0.42
+      ],
+      "titulo": "Docinhos de festa: brigadeiro e beijinho",
+      "alt": "Caixa com brigadeiros e beijinhos organizados para festa"
+    },
+    {
+      "arquivo": "02-bolos-classicos/colagem-docinhos-e-bolo-amarelo.png",
+      "slug": "bolo-amarelo",
+      "recorte": [
+        0,
+        1560,
+        1440,
+        2657
+      ],
+      "enquadramento": [
+        0.5,
+        0.42
+      ],
+      "titulo": "Bolo amarelo com decoração em bico",
+      "alt": "Bolo amarelo com borda em bico de confeitar e detalhes decorativos"
+    },
+    {
+      "arquivo": "02-bolos-classicos/colagem-brigadeirao-e-bolo.png",
+      "slug": "brigadeirao",
+      "recorte": [
+        0,
+        420,
+        1440,
+        1300
+      ],
+      "enquadramento": [
+        0.42,
+        0.35
+      ],
+      "titulo": "Brigadeirão de chocolate",
+      "alt": "Brigadeirão de chocolate com granulado servido em forminha"
+    },
+    {
+      "arquivo": "02-bolos-classicos/colagem-brigadeirao-e-bolo.png",
+      "slug": "bolo-branco-amarelo",
+      "recorte": [
+        0,
+        1720,
+        1440,
+        2620
+      ],
+      "enquadramento": [
+        0.5,
+        0.42
+      ],
+      "titulo": "Bolo branco com acabamento amarelo",
+      "alt": "Bolo branco texturizado com borda em bico de confeitar amarelo"
+    },
+    {
+      "arquivo": "03-bolos-caseiros/colagem-bolos-cenoura.png",
+      "slug": "bolo-cenoura-chocolate",
+      "recorte": [
+        0,
+        310,
+        1440,
+        1180
+      ],
+      "enquadramento": [
+        0.5,
+        0.42
+      ],
+      "titulo": "Bolo de cenoura com calda de chocolate",
+      "alt": "Bolo de cenoura caseiro coberto com calda de chocolate e granulado"
+    },
+    {
+      "arquivo": "03-bolos-caseiros/colagem-bolos-cenoura.png",
+      "slug": "bolo-cenoura",
+      "recorte": [
+        0,
+        1620,
+        1440,
+        2190
+      ],
+      "enquadramento": [
+        0.5,
+        0.42
+      ],
+      "titulo": "Bolo caseiro fresquinho da vitrine",
+      "alt": "Bolo caseiro redondo dourado recém-assado sobre prato de papel"
+    },
+    {
+      "arquivo": "04-tortas/colagem-vitrine-tortas.png",
+      "slug": "vitrine-tortas",
+      "recorte": [
+        0,
+        310,
+        1440,
+        1350
+      ],
+      "enquadramento": [
+        0.5,
+        0.42
+      ],
+      "titulo": "Mesa de tortas e mousses da Mary Cakes",
+      "alt": "Mesa com tortas de morango, tortinhas e mousses decoradas"
+    },
+    {
+      "arquivo": "04-tortas/colagem-vitrine-tortas.png",
+      "slug": "vitrine-marycakes",
+      "recorte": [
+        0,
+        1560,
+        1440,
+        2690
+      ],
+      "enquadramento": [
+        0.5,
+        0.4
+      ],
+      "titulo": "A mesa de doces da Mary Cakes",
+      "alt": "Tortas de chocolate expostas na loja com painel de flores ao fundo"
+    },
+    {
+      "arquivo": "04-tortas/torta-pote.png",
+      "slug": "torta-pote",
+      "recorte": [
+        0,
+        950,
+        1440,
+        2650
+      ],
+      "enquadramento": [
+        0.5,
+        0.45
+      ],
+      "titulo": "Tortas individuais no pote",
+      "alt": "Tortas individuais empilhadas em potes transparentes"
+    },
+    {
+      "arquivo": "04-tortas/tortinha-limao.png",
+      "slug": "tortinha-limao",
+      "recorte": [
+        0,
+        1800,
+        1440,
+        2390
+      ],
+      "enquadramento": [
+        0.5,
+        0.42
+      ],
+      "titulo": "Tortinha de limão siciliano",
+      "alt": "Tortinha de limão siciliano com merengue maçaricado servida em pote"
+    },
+    {
+      "arquivo": "05-copos/copo-oreo.png",
+      "slug": "copo-oreo",
+      "recorte": [
+        0,
+        700,
+        1440,
+        1800
+      ],
+      "enquadramento": [
+        0.5,
+        0.4
+      ],
+      "titulo": "Copo Oreo cremoso — edição limitada",
+      "alt": "Copo Oreo cremoso em camadas de creme branco, chocolate e biscoito"
+    },
+    {
+      "arquivo": "05-copos/colagem-copos.png",
+      "slug": "copos-variados",
+      "recorte": [
+        0,
+        310,
+        1440,
+        1230
+      ],
+      "enquadramento": [
+        0.5,
+        0.42
+      ],
+      "titulo": "Copos da felicidade — vários sabores",
+      "alt": "Vários copos da felicidade com morango, brownie e chocolate na bancada"
+    },
+    {
+      "arquivo": "05-copos/colagem-copos.png",
+      "slug": "copos-morango",
+      "recorte": [
+        0,
+        1700,
+        1440,
+        2660
+      ],
+      "enquadramento": [
+        0.5,
+        0.42
+      ],
+      "titulo": "Copos da felicidade de morango e chocolate",
+      "alt": "Copos da felicidade em camadas de creme, morango, brownie e chocolate"
+    },
+    {
+      "arquivo": "05-copos/copo-classico.png",
+      "slug": "copo-classico",
+      "recorte": [
+        0,
+        820,
+        1440,
+        2050
+      ],
+      "enquadramento": [
+        0.5,
+        0.42
+      ],
+      "titulo": "O clássico copo da felicidade",
+      "alt": "Copo da felicidade segurado na mão, com camadas de creme, chocolate e brownie"
+    },
+    {
+      "arquivo": "05-copos/copo-tropical.png",
+      "slug": "copo-tropical",
+      "recorte": [
+        0,
+        1320,
+        1440,
+        2650
+      ],
+      "enquadramento": [
+        0.5,
+        0.55
+      ],
+      "titulo": "Copo tropical",
+      "alt": "Copo tropical com creme e frutas frescas como kiwi, morango e manga"
+    },
+    {
+      "arquivo": "06-doces/bombom-uva.png",
+      "slug": "bombom-uva",
+      "recorte": [
+        0,
+        700,
+        1440,
+        2180
+      ],
+      "enquadramento": [
+        0.5,
+        0.45
+      ],
+      "titulo": "Bombom de uva",
+      "alt": "Morango do amor com casquinha vermelha brilhante"
+    },
+    {
+      "arquivo": "06-doces/bombom-uva-vitrine.png",
+      "slug": "bombom-uva-vitrine",
+      "recorte": [
+        0,
+        1000,
+        1440,
+        2650
+      ],
+      "enquadramento": [
+        0.5,
+        0.42
+      ],
+      "titulo": "Bombom de uva na vitrine da loja",
+      "alt": "Potes de bombom de uva expostos na loja com painel de flores ao fundo"
+    },
+    {
+      "arquivo": "06-doces/bombom-uva-potes.png",
+      "slug": "bombom-uva-potes",
+      "recorte": [
+        0,
+        850,
+        1440,
+        2600
+      ],
+      "enquadramento": [
+        0.5,
+        0.42
+      ],
+      "titulo": "Reposição diária de bombom de uva",
+      "alt": "Potes de bombom de uva empilhados na bancada da confeitaria"
+    },
+    {
+      "arquivo": "06-doces/morango-do-amor.png",
+      "slug": "morango-do-amor",
+      "recorte": [
+        0,
+        330,
+        1440,
+        1950
+      ],
+      "enquadramento": [
+        0.5,
+        0.4
+      ],
+      "titulo": "Morango do amor",
+      "alt": "Morango do amor com casquinha vermelha brilhante"
+    },
+    {
+      "arquivo": "06-doces/colagem-morango-chocolate.png",
+      "slug": "morango-chocolate",
+      "recorte": [
+        0,
+        310,
+        1440,
+        1350
+      ],
+      "enquadramento": [
+        0.5,
+        0.42
+      ],
+      "titulo": "Morangos cobertos de chocolate",
+      "alt": "Morangos cobertos com chocolate e fios decorativos em forminhas"
+    },
+    {
+      "arquivo": "06-doces/colagem-morango-chocolate.png",
+      "slug": "morango-chocolate-2",
+      "recorte": [
+        0,
+        1700,
+        1440,
+        2657
+      ],
+      "enquadramento": [
+        0.5,
+        0.42
+      ],
+      "titulo": "Morango de chocolate feito no dia",
+      "alt": "Morango grande coberto de chocolate segurado na mão"
+    },
+    {
+      "arquivo": "09-salgados/empadinhas.png",
+      "slug": "empadinhas",
+      "recorte": [
+        0,
+        650,
+        1440,
+        1750
+      ],
+      "enquadramento": [
+        0.5,
+        0.4
+      ],
+      "titulo": "Empadinhas assadas na hora",
+      "alt": "Empadinhas douradas assando no forno da confeitaria"
+    },
+    {
+      "arquivo": "03-bolos-caseiros/bolo-cenoura-morango.png",
+      "slug": "bolo-cenoura-morango",
+      "recorte": null,
+      "enquadramento": [
+        0.5,
+        0.45
+      ],
+      "titulo": "Bolo de cenoura com calda de chocolate e morangos",
+      "alt": "Bolo de cenoura com calda de chocolate escorrendo e morangos no topo"
+    },
+    {
+      "arquivo": "02-bolos-classicos/bolo-chocolate-frutas.png",
+      "slug": "bolo-chocolate-frutas",
+      "recorte": null,
+      "enquadramento": [
+        0.5,
+        0.4
+      ],
+      "titulo": "Bolo de chocolate com frutas vermelhas",
+      "alt": "Bolo de chocolate coberto com granulado e frutas vermelhas frescas no topo"
+    },
+    {
+      "arquivo": "04-tortas/torta-nutella.png",
+      "slug": "torta-nutella",
+      "recorte": [
+        0,
+        0,
+        560,
+        584
+      ],
+      "enquadramento": [
+        0.45,
+        0.45
+      ],
+      "titulo": "Torta mousse de Nutella e torta holandesa",
+      "alt": "Torta mousse de Nutella inteira com acabamento em espiral de chocolate"
+    },
+    {
+      "arquivo": "04-tortas/tortas-fatias.png",
+      "slug": "tortas-fatias",
+      "recorte": null,
+      "enquadramento": [
+        0.5,
+        0.45
+      ],
+      "titulo": "Fatias de torta gourmet na vitrine",
+      "alt": "Fatias de torta gourmet embaladas e expostas na vitrine refrigerada"
+    },
+    {
+      "arquivo": "04-tortas/torta-frutas-vermelhas.png",
+      "slug": "torta-frutas-vermelhas",
+      "recorte": [
+        175,
+        0,
+        500,
+        476
+      ],
+      "enquadramento": [
+        0.5,
+        0.45
+      ],
+      "titulo": "Torta gourmet de frutas vermelhas",
+      "alt": "Fatia de torta gourmet de frutas vermelhas com calda escorrendo"
+    },
+    {
+      "arquivo": "04-tortas/vitrine-tortas-ursinho.png",
+      "slug": "vitrine-tortas-ursinho",
+      "recorte": null,
+      "enquadramento": [
+        0.5,
+        0.45
+      ],
+      "titulo": "Tortas na vitrine da loja",
+      "alt": "Tortas de chocolate expostas na loja com ursinho de pelúcia e painel de flores"
+    },
+    {
+      "arquivo": "05-copos/copos-ferrero.png",
+      "slug": "copos-ferrero",
+      "recorte": null,
+      "enquadramento": [
+        0.5,
+        0.4
+      ],
+      "titulo": "Copo da felicidade com Ferrero",
+      "alt": "Copos da felicidade em camadas coroados com bombons Ferrero Rocher"
+    },
+    {
+      "arquivo": "06-doces/cones-trufados.png",
+      "slug": "cones-trufados",
+      "recorte": null,
+      "enquadramento": [
+        0.5,
+        0.35
+      ],
+      "titulo": "Cones trufados",
+      "alt": "Ovo de colher de brigadeiro trufado em caixa personalizada"
+    },
+    {
+      "arquivo": "07-pascoa/ovo-brigadeiro.png",
+      "slug": "ovo-brigadeiro",
+      "recorte": null,
+      "enquadramento": [
+        0.5,
+        0.45
+      ],
+      "titulo": "Ovo de colher brigadeiro trufado",
+      "alt": "Ovo de colher de brigadeiro trufado em caixa personalizada rosa, servido com colher"
+    },
+    {
+      "arquivo": "07-pascoa/ovo-choco-ninho.png",
+      "slug": "ovo-choco-ninho",
+      "recorte": null,
+      "enquadramento": [
+        0.5,
+        0.45
+      ],
+      "titulo": "Ovo de colher Choco Ninho — 500 g",
+      "alt": "Ovo de colher Choco Ninho com fios de Nutella em caixa azul personalizada"
+    },
+    {
+      "arquivo": "07-pascoa/ovo-kinder.png",
+      "slug": "ovo-kinder",
+      "recorte": null,
+      "enquadramento": [
+        0.5,
+        0.45
+      ],
+      "titulo": "Ovo de colher Kinder — 500 g",
+      "alt": "Ovo de colher com recheio cremoso de Kinder em caixa personalizada"
+    },
+    {
+      "arquivo": "07-pascoa/ovo-cookie.png",
+      "slug": "ovo-cookie",
+      "recorte": null,
+      "enquadramento": [
+        0.5,
+        0.4
+      ],
+      "titulo": "Ovo de Páscoa de cookie com gotas de chocolate",
+      "alt": "Ovo de Páscoa em massa de cookie com gotas de chocolate, em frente ao neon Mary Cakes"
+    },
+    {
+      "arquivo": "08-presentes/cesta-presente.png",
+      "slug": "cesta-presente",
+      "recorte": [
+        0,
+        430,
+        692,
+        1100
+      ],
+      "enquadramento": [
+        0.5,
+        0.45
+      ],
+      "titulo": "Cesta de Dia das Mães",
+      "alt": "Cesta de presente de Dia das Mães com bolo, chocolates, caneca e plaquinha decorativa"
+    },
+    {
+      "arquivo": "08-presentes/tea-bolo.jpg",
+      "slug": "tea-bolo",
+      "recorte": [
+        0,
+        0,
+        640,
+        975
+      ],
+      "enquadramento": [
+        0.5,
+        0.32
+      ],
+      "titulo": "Bolo entregue ao Instituto TEA Tatuapé — Unidade Carrão",
+      "alt": "Bolo temático de Natal com toppers de Papai Noel, nomes das crianças e o símbolo do autismo"
+    }
+  ]
+}

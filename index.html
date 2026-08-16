@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Parisienne&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap">
-<link rel="stylesheet" href="assets/css/style.css?v=6.0.0">
+<link rel="stylesheet" href="assets/css/style.css?v=8.1.0">
 <link rel="preload" as="image" href="assets/img/produtos/bolo-rosa-morango-card.webp" fetchpriority="high">
 <script>document.documentElement.className += " js";</script>
 
@@ -954,11 +954,6 @@
              data-caption="A loja na Rua Nossa Senhora das Candeias, 489"
              alt="Fachada rosa da Mary Cakes Confeitaria com letreiro e vitrine de bolos"
              width="800" height="1000" loading="lazy" decoding="async">
-        <img src="assets/img/produtos/vitrine-marycakes-card.webp"
-             data-full="assets/img/produtos/vitrine-marycakes.webp"
-             data-caption="A mesa de doces da Mary Cakes"
-             alt="Mesa de tortas e doces com a placa do logo da Mary Cakes Confeitaria"
-             width="800" height="1000" loading="lazy" decoding="async">
         <img src="assets/img/produtos/vitrine-tortas-ursinho-card.webp"
              data-full="assets/img/produtos/vitrine-tortas-ursinho.webp"
              data-caption="Tortas na vitrine da loja"
@@ -1271,7 +1266,17 @@
 </button>
 
 <!-- ============ WHATSAPP FLUTUANTE ============ -->
-<a class="wa-float" href="https://wa.me/5511988618505?text=Ol%C3%A1%2C%20Mary!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener" aria-label="Falar com a Mary Cakes no WhatsApp">
+<!-- A Mary fica FORA do botão, num link próprio com z-index menor, para
+     poder passar por trás dele. aria-hidden + tabindex=-1 evitam link duplicado
+     para quem usa leitor de tela ou teclado — o botão ao lado já cumpre isso. -->
+<a class="wa-mascote-link" id="waMascote"
+   href="https://wa.me/5511988618505?text=Ol%C3%A1%2C%20Mary!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido."
+   target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+  <img class="wa-mascote" src="assets/img/mary-mascote.webp" alt=""
+       width="376" height="560" loading="lazy" decoding="async">
+</a>
+
+<a class="wa-float" id="waFloat" href="https://wa.me/5511988618505?text=Ol%C3%A1%2C%20Mary!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener" aria-label="Falar com a Mary Cakes no WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2m5.8 14.16c-.25.69-1.44 1.32-1.99 1.4-.53.08-1.19.11-1.92-.12-.44-.14-1.01-.33-1.74-.64-3.06-1.32-5.06-4.4-5.21-4.6-.15-.2-1.25-1.66-1.25-3.17s.79-2.25 1.07-2.56c.28-.31.61-.38.81-.38h.58c.19 0 .44-.7.68.52.25.6.85 2.08.92 2.23.08.15.13.33.03.53-.1.2-.15.32-.3.5-.15.17-.31.39-.45.52-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.64-.8.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.28.1 1.75.83 2.05.98.3.15.5.22.57.35.08.12.08.71-.17 1.4"/></svg>
   <span class="wa-float-label">Pedir agora</span>
 </a>
@@ -1288,6 +1293,6 @@
   <button class="lb-nav lb-next" id="lbNext" aria-label="Próxima imagem">&#8250;</button>
 </div>
 
-<script src="assets/js/main.js?v=6.0.0" defer></script>
+<script src="assets/js/main.js?v=8.1.0" defer></script>
 </body>
 </html>

@@ -1,1 +1,28 @@
+# =====================================================================
+# Material de origem — NÃO deve ir para o repositório nem para o ar.
+# São ~127 MB de prints e fotos brutas que já viraram os WebP em assets/.
+# Sem isto, o GitHub Pages publicaria tudo isso publicamente.
+# =====================================================================
+Fotos/
+Fotos-2/
+perfil_instagram/
+
+# Fotos brutas já organizadas por categoria (94 MB). São material de
+# trabalho: o site usa só as versões WebP geradas em assets/img/produtos/.
+# Ficam de fora porque o GitHub Pages serve TUDO que está no repositório —
+# sem esta linha, os 94 MB de prints ficariam públicos e consumiriam banda.
+# Guarde um backup delas fora do Git (Drive, HD externo).
+fotos-origem/
+
+# configuração local do editor/agente
 .claude/
+
+# sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# temporários
+*.log
+*.tmp
+~$*
