@@ -85,12 +85,25 @@
   /* ---------- header: sombra ao rolar ---------- */
   var header = document.getElementById('header');
   var toTop = document.getElementById('toTop');
+  var waFloat = document.getElementById('waFloat');
+  var maryLink = document.getElementById('waMascote');
+  var mascote = maryLink && maryLink.querySelector('.wa-mascote');
   var onScroll = function () {
-    header.classList.toggle('is-stuck', window.scrollY > 8);
+    var y = window.scrollY;
+    header.classList.toggle('is-stuck', y > 8);
     if (toTop) {
-      var mostrar = window.scrollY > window.innerHeight * 1.2;
       toTop.hidden = false;
-      toTop.classList.toggle('is-on', mostrar);
+      toTop.classList.toggle('is-on', y > window.innerHeight * 1.2);
+    }
+    /* a Mary entra depois do hero, para não disputar atenção com ele */
+    if (maryLink) {
+      var mostraMary = y > window.innerHeight * 0.55;
+      if (mostraMary && mascote && mascote.loading === 'lazy') {
+        /* fixed + opacity:0 deixa o lazy-load imprevisível: força o download
+           no exato momento em que ela vai aparecer */
+        mascote.loading = 'eager';
+      }
+      maryLink.classList.toggle('tem-mary', mostraMary);
     }
   };
   onScroll();
